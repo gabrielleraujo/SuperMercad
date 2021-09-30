@@ -1,0 +1,143 @@
+﻿/* Cores Globais */
+:root {
+    --color-white: #F3F3F4;
+    --color-azul-cel-profundo: #00bfff;
+    --color-medium-gray: #7E7F83;
+    --color-background: #34312D;
+}
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-repeat: repeat;
+    background-color: var(--color-background); /* alterado */
+    font-family: Candara;
+    color: white; /* incluido */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+/* CSS Da GABI 
+-------------------------------------------------- */
+
+option {
+    font-family: Candara;
+}
+
+.logo-text {
+    font-family: Candara;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.links:hover, .links:active {
+    background: var(--color-azul-cel-profundo);
+    color: black;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+
+.navbar-nav flex-grow-1 a:hover, a:active {
+    background: white;
+}
+
+article a {
+    background-color: var(--color-white);
+    color: black;
+    padding: 6px;
+    display: inline-block;
+    width: 100%;
+    opacity: 0.8;
+}
+
+article a:link, a:visited {
+    text-decoration: none;
+    opacity: 0.8;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin-right: 3em;
+}
+
+li {
+    margin-bottom: 1px;
+}
+
+.choose-option ul li::before {
+    content: none; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--color-azul-cel-profundo);
+    font-weight: bold;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -2em; /* Also needed for space (tweak if needed) */
+    margin-right: 0em; /* To add space between the bullet and the text */
+}

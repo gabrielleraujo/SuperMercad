@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "System Error";
+}
+
+@model Exception;
+
+<div class="text-center">
+    <div>
+        <h3>ERRO 501</h3>
+        <h5>@Model.Message</h5>
+        <h5>Ops, no momento estamos com problemas no nosso sistema. :c</h5>
+
+        @if (@Model.InnerException != null)
+        {
+            <h6>Inner exception: </h6>
+            <p>@Model.InnerException.Message</p>
+        }
+    </div>
+</div>

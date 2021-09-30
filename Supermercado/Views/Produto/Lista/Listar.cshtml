@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Listar Produtos";
+}
+
+@model IList<Produto>
+
+@ViewData["Mensagem"]
+
+<article id="choose-option">
+    @{
+        <h4>Encontramos @Model.Count() produto(s)</h4>
+        <br />
+        foreach (var produto in @Model)
+        {
+            <div>
+                <h5>@produto.Nome</h5>
+                <ul>
+                    <li><a class="links" style="color: black">Nome: @produto.Nome <br />Preço: R$@produto.Preco <br />Código: @produto.ProdutoId</a></li>
+                </ul>
+            </div>
+        }
+    }
+</article>

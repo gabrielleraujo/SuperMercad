@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "List Error";
+}
+
+@model ListErrorViewModel;
+
+<div class="text-center">
+    <div>
+        <h3>ERRO 401</h3>
+        @foreach (var erro in @Model.Erros)
+        {
+            <h6>@erro</h6>
+        }
+    </div>
+</div>

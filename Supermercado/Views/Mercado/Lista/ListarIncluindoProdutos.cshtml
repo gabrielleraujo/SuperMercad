@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Listar Mercados E Seus Produtos";
+}
+
+@model IList<Mercado>
+
+@ViewData["Mensagem"]
+
+<article id="choose-option">
+    <h4>Encontramos @Model.Count() mercado(s)</h4>
+    <br />
+    @foreach (var mercado in @Model)
+    {
+    <div>
+        
+        @foreach (var produto in mercado.Produtos)
+        {
+        <div>
+            <h5>@mercado.Nome</h5>
+            <ul>
+                <li><a class="links" style="color: black">Produto: @produto.Nome <br />Preco: @produto.Preco <br /></a></li>
+            </ul>
+        </div>
+        }
+    </div>
+    }
+</article>

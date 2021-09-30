@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Listar Mercados";
+}
+
+@model IList<Mercado>
+
+@ViewData["Mensagem"]
+
+<article id="choose-option">
+    @{
+        <h4>Encontramos @Model.Count() mercado(s)</h4>
+        <br />
+        foreach (var mercado in @Model)
+        {
+            <div>
+                <h5>@mercado.Nome</h5>
+                <ul>
+                    <li><a class="links" style="color: black">Nome: @mercado.Nome <br />Local: @mercado.Local <br />Código: @mercado.MercadoId</a></li>
+                </ul>
+            </div>
+        }
+    }
+</article>

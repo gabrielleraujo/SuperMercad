@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Cadastrar Mercado";
+}
+
+<!-- Rota: Mercado/PreencherFormularioDeCadastro -->
+
+@model AdicionaMercadoViewModel
+
+<form asp-controller="Mercado" asp-action="PreencherFormularioDeCadastro" method="post">
+
+    <div>
+        <h2>Cadastro Mercado</h2>
+        <label>Nome:</label>
+        <input asp-for="@Model.Mercado.Nome" placeholder="Nome do mercado" class="form-control" />
+        <span asp-validation-for="@Model.Mercado.Nome" class="text-danger"></span>
+        <br />
+        <select class="form-control single-select" asp-for="@Model.Mercado.Local">
+            <option selected value="">[Local do mercado]</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+        <span asp-validation-for="@Model.Mercado.Local" class="text-danger"></span>
+        <br />
+    </div>
+
+    <p>Tente também adicionar seu primiero produto.</p>
+    <div class="text-right">
+        <button asp-controller="Mercado" asp-action="Adicionar" class="btn btn-dark" >
+            Adicionar Mercado
+        </button>
+        <button asp-controller="Produto" asp-action="PreencherFormularioDeCadastro" class="btn btn-dark" >
+            Adicionar Produto
+        </button>
+    </div>
+</form>

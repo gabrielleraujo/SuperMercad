@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="logo-text">SuperMercard</h1>
+    <article id="choose-option">
+        
+        <h6 class="text-right"style="padding-right: 3em;">Qual opção deseja? c:</h6>
+
+        <h5>Adicionar</h5>
+        <ul>
+            <li><a class="links" asp-controller="Mercado" asp-action="FormCadastro" alt="Cadastrar Mercado">Mercado</a></li>
+            <li><a class="links" asp-controller="Mercado" asp-action="FormCadastroComProduto" alt="Cadastrar Mercado com Produto">Mercado com Produto</a></li>
+        </ul>
+
+        <h5>Listar</h5>
+        <ul>
+            <li><a class="links" asp-controller="Mercado" asp-action="Listar" alt="Listar Mercado">Mercados</a></li>
+            <li><a class="links" asp-controller="Produto" asp-action="Listar" alt="Listar Produto">Produtos</a></li>
+            <li><a class="links" asp-controller="Mercado" asp-action="ListarIncluindoProdutos" alt="Listar Produto">Mercados Incluindo Produtos</a></li>
+        </ul>
+    </article>
+</div>
